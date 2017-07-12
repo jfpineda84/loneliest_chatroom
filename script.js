@@ -3,7 +3,7 @@ $(window).load(function(){
   var message =  function() {
     // refacto the repeating code inside this fuction, so all i have to do i call it later as message() and i can use the code below to run the commands
 
-      // var time = ((new Date()).getHours()) + ':' + ((new Date()).getMinutes())
+      var time = ((new Date()).getHours()) + ':' + ((new Date()).getMinutes())
       // here i find current time and get hours and minutes to display
 
       // var users = ['Me','Myself','I']
@@ -12,10 +12,10 @@ $(window).load(function(){
       // this will randomly select a # betwee 3 and 1 (although it is not working- check)
 
 
-      var i = 0;
       count = function() {
+        var i = $('.message').length;
         var users = ['Me','Myself','I'];
-          console.log(i)
+          // console.log(i)
         return users[ i++ %3 ];
       }
 
